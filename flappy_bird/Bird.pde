@@ -21,7 +21,14 @@ class Bird {
   void render() {
     fill(255);
     ellipse(x, y, s, s);
+    if (jump == true) {
     text(score, width/2, 50);
+    }
+    else {
+    textAlign(CENTER);
+    textSize(100);
+    text(score, width/2, height/2);
+    }
   }
 
   // Opdater fuglens position

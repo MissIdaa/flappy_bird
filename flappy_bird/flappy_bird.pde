@@ -46,7 +46,7 @@ void draw() {
    p.dx = 0;
    p2.dx = 0;
    jump = false;
- }
+ } 
 }
 
 void keyPressed() {
