@@ -13,18 +13,18 @@ void setup() {
   b = new Bird();
   p = new Pipe(width+100);
   p2 = new Pipe(width+370);
-   jump = true;
+  jump = true;
 }
 
 void draw() {
-  image(bg,0,0, width, height);
-  base = loadImage ("base.png");
-  b.render();
-  b.update();
+  background(bg);
   p.render();
   p2.render();
   p.update();
   p2.update();
+  b.render();
+  b.update();
+  image(base, 0, 700, width, 100);
   
  if (b.x + b.s/2 > p.x && b.x - b.s/2 < p.x + p.w && (b.y + b.s/2 < p.y || b.y - b.s/2 > p.y + p.h)) {
    p.dx = 0;
