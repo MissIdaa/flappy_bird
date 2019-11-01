@@ -21,7 +21,15 @@ class Bird {
   void render() {
     fill(255);
     ellipse(x, y, s, s);
+    if (jump == true) {
     text(score, width/2, 50);
+    }
+    else {
+    textAlign(CENTER);
+    textSize(50);
+    text("GAME OVER", width/2, height/2 - 100);
+    text(score, width/2, height/2);
+    }
   }
 
   // Opdater fuglens position
@@ -46,9 +54,10 @@ class Bird {
   // Bask med vingerne
   void flap() {
     if(ready2flap) {
+      if (jump == true) {
       dy += -6.75;
       ready2flap = false;
+      }
     }
   }
 }
-
