@@ -26,7 +26,8 @@ class Bird {
     }
     else {
     textAlign(CENTER);
-    textSize(100);
+    textSize(50);
+    text("GAME OVER", width/2, height/2 - 100);
     text(score, width/2, height/2);
     }
   }
