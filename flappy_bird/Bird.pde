@@ -4,6 +4,7 @@ class Bird {
   float s; // Fuglens størrelse
   boolean ready2flap;
   int score;
+  PFont myFont;
 
      // Constructor til nye fugle
   Bird() {
@@ -21,6 +22,10 @@ class Bird {
   void render() {
     fill(255);
     ellipse(x, y, s, s);
+    
+    myFont = createFont("FlappyRegular.ttf", 92);
+    textFont(myFont);
+    textAlign(CENTER, CENTER);
     text(score, width/2, 50);
   }
 
@@ -51,4 +56,3 @@ class Bird {
     }
   }
 }
-
