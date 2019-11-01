@@ -54,10 +54,31 @@ void keyPressed() {
     b.dy = 0;
     b.flap();
   }
+  if (key == ' ' && jump == false) {
+  reset();
+  }
 }
 
 void keyReleased() {
   if (!b.ready2flap) {
     b.ready2flap = true;
   }
+}
+
+void reset() {
+  b.x = width/2;
+  b.y = height/2;
+  b.dy = 0;
+  b.ddy = 0.33;
+  b.ready2flap = true;
+  b.score = 0;
+  jump = true;
+  p.x = width+100;
+  p.dx = -2.01;
+  p.y = int(random(200, 450));
+  p.withPoint = true;
+  p2.x = width+370;
+  p2.dx = -2.01;
+  p2.y = int(random(200, 450));
+  p2.withPoint = true;
 }

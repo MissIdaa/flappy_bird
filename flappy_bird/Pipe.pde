@@ -56,15 +56,6 @@ class Pipe {
     image(PipeArrayUp [pipecolor], x-5, 0, w+10, y+2);
     }
   }
-
-  // Metode, der tjekker om røret er
-  // blevet ramt af en fugl. Input skal være
-  // et fugle-objekt og metoden skal returnere
-  // true eller false alt efter om fuglen er 
-  // ramt eller ej.
-  boolean hit(Bird b) {
-    return false;
-  }
   
   // Metode, der returnerer true, når røret er uden
   // for canvas. Ellers false
